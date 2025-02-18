@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="booking.css" />
+    
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    
+    <!-- Leaflet CSS e JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+    <style>
+      
+    .custom-marker {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-align: center;
+      line-height: 30px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra ao círculo */
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    /* Estilos de hover para o marcador */
+    .custom-marker:hover {
+      transform: scale(1.3); /* Aumenta o círculo completo */
+      background-color: rgba(0, 0, 0, 0.8); /* Cor mais intensa */
+    }
+
+     
+      </style>
+      
+
+
+    <title>Web Design Mastery | MNTN</title>
+
+
+    </head>
+    <body>
+    <header class="header" id="home">
+        <nav>
+          <div class="nav__bar">
+            <div class="logo nav__logo">
+              <a href="#">TRIPLE TIDE</a>
+            </div>
+            <ul class="nav__links" id="nav-links">
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#rentals">Rentals</a></li>
+              <li><a href="#surfschool">Surf School</a></li>
+              <li><a href="#surfmap">Surf Map</a></li>
+              <li><a href="#sup">SUP</a></li>
+            </ul>
+            <div class="nav__menu__btn" id="menu-btn">
+              <i class="ri-menu-line"></i>
+            </div>
+            <div class="nav__action__btn">
+              <button class="btn">
+                <a href="#home" class="header-logo">
+                  <img src="images/logo_sem_background_cropado.png" alt="Logo da Empresa">
+                </a>
+              </button>
+            </div>
+          </div>
+        </nav>
+
+        <div class="section__container header__container">
+        <div class="header__content">
+          <h3 class="section__subheader">A SURFING GUIDE pt3</h3>
+          <h1 class="section__header">
+            Madeira Surf Map
+          </h1>
+        </div>
+        </div>
+      </header>
+
+      <!-- Secção de Introdução aos Pontos de Surf -->
+      <div class="full-width-bg">
+    <section class="section__container" id="surf-intro-section">
+    <h2 class="section__header2">Discover Madeira’s Surf Spots</h2>
+    <div class="text-content">
+
+        
+           <p>Madeira offers a diverse range of surf spots suited for all skill levels, from beginner-friendly waves to powerful barrels that challenge even the most seasoned surfers. Our island boasts world-class locations like the charming village of Jardim do Mar, renowned for its long, unique wave patterns and consistent north and northwest swells. This spot is a must-visit, with waves that can tower over 10 meters in ideal surf conditions and stretch up to 300 meters in length.</p>
+  
+           <p>For those just starting out, Seixal Beach provides an ideal learning environment. This sheltered black sand beach, naturally formed from volcanic sand, offers safe conditions for beginners to build their confidence on the waves.</p>
+  
+           <p>On the North Coast, in São Vicente, you’ll find hidden gems like Fajã da Areia, nestled in Juncos Bay. This spot is known for its reliability and high wave quality, with mid-length peaks reaching around 100 meters on the best days. Each surf spot across Madeira has its own unique characteristics, marked on our map to help you discover the best places for your skill level.</p>
+  
+           <p>For those in search of big-wave thrills and a true Atlantic adventure, local surf guide Ruben Afonso is here to lead you through an unforgettable surfing experience. With a focus on safety, full equipment, and technical and logistical support, Ruben ensures you’ll have everything you need for a thrilling and memorable surf holiday in Madeira. If you’re ready to dive into the island’s surf culture, don’t hesitate to reach out for more information.</p>
+         </div>
+      </section>
+    </div>

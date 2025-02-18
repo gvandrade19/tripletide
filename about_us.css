@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  
+  --primary-color: #0a1e27;
+  --secondary-color: #e9c675;
+  --text-light: #cbd5e1;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --header-font: "Playfair Display", serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+     background-color: #f5f5f5;
+}
+
+.heading {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.heading h1 {
+    font-family: var(--header-font);
+    font-size: 4rem;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.heading h1::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #4caf50;
+}
+
+.heading p {
+    font-family: var(--header-font);
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.about_us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about_us-img {
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.about_us-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.about_us-img:hover img {
+    transform: scale(1.2);
+}
+
+.about_us-content {
+    flex: 1;
+    max-width: 100%;
+}
+
+.about_us-content h2 {
+    font-family: var(--header-font);
+    font-size: 3.3rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+
+.about_us-content p {
+    font-family: var(--header-font); 
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+.about_us .book-now {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0a1e27;
+    color: aqua;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top:10px;
+    transition: 0.3 ease; 
+}
+
+.about_us .book-now:hover {
+    background-color: aqua;
+    color: #0a1e27;
+}
+
+
+
+
+
+
+
+
+
+
+.section__container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.about__container {
+    padding-top: 0;
+    display: grid;
+    gap: 5rem 2rem;
+    overflow: hidden;
+    margin-top: 200px;
+}
+
+.about__image img {
+    max-width: 400px;
+    max-height: 550px;
+    margin-inline: auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+  }
+
+
+  .about__content p {
+    font-size: 1.35rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+
+  .about__content a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--secondary-color);
+  }
+
+  .about__content a span {
+    transition: 0.3s;
+  }
+  
+  .about__content a:hover span {
+    transform: translateX(10px);
+  }
+
+  .section__header {
+    margin-bottom: 1rem;
+    font-size: 3.3rem;
+    font-weight: 400;
+    font-family: var(--header-font);
+    color: #0a1e27;
+  }
+
+.about {     
+    overflow: hidden;
+  }
+  
+  .about__container {
+    padding-top: 0;
+    display: grid;
+    gap: 5rem 2rem;
+    overflow: hidden;
+    margin-top: 200px;
+    align-items: center;
+  }
+  
+  .about__image img {
+    max-width: 400px;
+    margin-inline: auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    transition: 0.5s ease;
+  }
+
+  .about__image:hover img {
+    transform: scale(1.2);
+  }
+
+
+
+
+  @media (width > 768px) {
+    .nav__logo {
+      flex: 1;
+    }
+  
+    .nav__links {
+      position: static;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      background-color: transparent;
+    }
+  
+    .nav__menu__btn {
+      display: none;
+    }
+  
+    .nav__action__btn {
+      justify-content: flex-end;
+      display: flex;
+      flex: 1;
+    }
+  
+    .header__container {
+      height: calc(100% - 10rem);
+    }
+  
+    .header__socials {
+      display: flex;
+    }
+  
+    .about__container {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      gap: 10rem 2rem;
+    }
+  
+    .about__image-1 {
+      grid-area: 1/2/2/3;
+    }
+  
+    .about__image-3 {
+      grid-area: 3/2/4/3;
+    }
+  
+    .about__content {
+      margin-left: 6rem;
+    }
+  
+    .footer__container {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+  }

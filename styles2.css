@@ -1,0 +1,394 @@
+/********************************* CABEÇALHO ***************************************/
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo ligeiramente transparente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Mantém o cabeçalho sempre no topo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Logo */
+.header-logo img {
+    height: 50px; /* Ajusta a altura do logo */
+}
+
+/* Ícone do menu (para todas as telas) */
+.menu-icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: #333; /* Cor do ícone do menu */
+    display: block; /* Mostra o ícone do menu em todas as telas */
+}
+
+/* Social Icons continuam escondidos em telas pequenas */
+@media (max-width: 768px) {
+    .social-icons {
+        display: none; /* Esconde os ícones de redes sociais em telas menores */
+    }
+}
+/* Ícones de redes sociais */
+.social-icons {
+    display: flex;
+    gap: 15px; /* Espaço entre os ícones */
+}
+
+.social-icons a {
+    color: #333; /* Cor padrão dos ícones */
+    font-size: 18px; /* Tamanho dos ícones */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: rgba(21,181,176,255); /* Cor ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Mostra o ícone do menu em telas menores */
+    }
+
+    .social-icons {
+        display: none; /* Esconde os ícones de redes sociais em telas menores */
+    }
+
+    .header-logo {
+        flex-grow: 1;
+        text-align: center; /* Centraliza o logo em dispositivos móveis */
+    }
+}
+
+/************************************************************************************/
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+/*********************************** SIDENAV ****************************************/
+/* Sidenav */
+.sidenav {
+    height: 100%; /* Ocupa toda a altura da tela */
+    width: 0; /* Começa com a largura 0 para ser invisível */
+    position: fixed;
+    z-index: 2000; /* Fica acima de outros elementos */
+    top: 0;
+    left: 0;
+    background-color: rgba(21, 181, 176, 1); /* Cor de fundo sólida */
+    overflow-x: hidden; /* Esconde o conteúdo horizontalmente */
+    transition: 0.5s ease; /* Animação suave ao abrir/fechar */
+    padding-top: 60px;
+    text-align: center;
+}
+
+/* Estilos para os links na sidenav */
+.sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px; /* Tamanho dos links */
+    color: #818181; /* Cor inicial dos links */
+    display: block;
+    transition: 0.3s; /* Animação suave nas mudanças de cor */
+}
+
+/* Hover nos links */
+.sidenav a:hover {
+    color: #f1f1f1; /* Cor quando o utilizador passa o mouse */
+}
+
+/* Botão fechar (X) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: white; /* Cor do X */
+}
+
+/* Social icons dentro da sidenav */
+.sidenav .social-icons-2 {
+    justify-content: center;
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.sidenav .social-icons-2 a {
+    color: white; /* Cor dos ícones de redes sociais */
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+.sidenav .social-icons-2 a:hover {
+    transform: scale(1.1); /* Leve aumento ao passar o mouse */
+    color: #e1e575; /* Cor ao passar o mouse */
+}
+
+/* Botão de reserva */
+.sidenav button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.sidenav button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1); /* Aumenta um pouco ao passar o mouse */
+}
+
+/* Abre a sidenav com largura de 250px */
+.sidenav.open {
+    width: 250px; /* Define a largura da sidenav ao abrir */
+}
+
+/* Responsividade */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  @media (max-width: 768px) {
+    .sidenav {
+        width: 100%; /* Em telas menores, ocupa toda a largura */
+    }
+}
+
+/************************************************************************************/
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+/*********************************** MAIN CONTENT ****************************************/
+/* Secção Geral de About Us */
+#about-us {
+    background-color: #f5f7fa;
+    padding: 60px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.about-content h1 {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Estilos para blocos onde o texto fica à esquerda e imagem à direita */
+.image-text-container.mission-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.image-text-container.mission-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+/* Estilos para os textos e imagens */
+.text-block {
+    padding-right: 30px;
+}
+
+.image-block {
+    text-align: center;
+}
+
+.image-block img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para as responsividades */
+@media (max-width: 768px) {
+    .image-text-container.mission-left, .image-text-container.mission-right {
+        grid-template-columns: 1fr;
+    }
+
+    .text-block, .image-block {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .image-block img {
+        max-width: 90%;
+    }
+
+    .about-content h1 {
+        font-size: 2em;
+    }
+}
+
+/*3. Equipa */
+#team-about {
+    padding: 60px 20px;
+    background-color: #f7f7f7; /* Cor de fundo clara */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+#team-about h2 {
+    font-size: 2.5em;
+    color: var(--text-color);
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Container para os membros da equipa */
+.team-container {
+    display: flex;
+    justify-content: center; /* Centraliza a equipa */
+    flex-wrap: wrap; /* Permite que os itens desçam para a próxima linha em ecrãs menores */
+    gap: 20px; /* Espaço entre os membros da equipa */
+}
+
+/* Estilos para cada membro da equipa */
+.team-member {
+    flex: 1 1 calc(33.333% - 40px); /* Ocupa 1/3 da largura com espaço entre eles */
+    max-width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagem dos membros da equipa */
+.team-photo {
+    width: 100%;
+    aspect-ratio: 1/1; /* Torna a imagem quadrada */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+    border-radius: 50%; /* Bordas circulares */
+    transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
+
+/* Nome dos membros */
+.team-member h3 {
+    font-size: 1.5em;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+/* Descrição dos membros */
+.team-member p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Animação ao passar o mouse sobre o membro da equipa */
+.team-member:hover {
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+.team-member:hover .team-photo {
+    transform: scale(1.1); /* Aumenta ligeiramente a imagem ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .team-member {
+        flex: 1 1 calc(50% - 40px); /* Mostra 2 colunas em ecrãs médios */
+    }
+}
+
+@media (max-width: 768px) {
+    .team-member {
+        flex: 1 1 100%; /* Mostra 1 coluna em ecrãs pequenos */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-photo {
+        width: 80%; /* Reduz o tamanho da imagem em ecrãs muito pequenos */
+        margin: 0 auto;
+    }
+    
+    .team-member h3 {
+        font-size: 1.3em;
+    }
+
+    .team-member p {
+        font-size: 1em;
+    }
+}
+
+
+
+
+/************************************************************************************/
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+/*********************************** SURF SCHOOL ****************************************/
+/* Secção da Escola de Surf */
+#surf-school {
+    background-color: #e0f7fa; /* Cor suave para destacar a secção */
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Arial', sans-serif;
+}
+
+#surf-school h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#surf-school p {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+/* Estilo do botão */
+.surf-button {
+    background-color: rgba(21, 181, 176, 1); /* Cor do botão */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.surf-button:hover {
+    background-color: rgba(21, 181, 176, 0.8); /* Efeito hover */
+    transform: scale(1.05); /* Leve aumento ao passar o rato */
+}
